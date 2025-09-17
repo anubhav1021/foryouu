@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #FF6B6B, #FFCD6E, #8C52FF, #00C9A7);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #333;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    text-align: center;
+    background-color: #ff8cd7;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 90%;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4em;
+    color: #E91E63;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.message-box {
+    text-align: left;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+p {
+    margin: 15px 0;
+}
+
+/* --- Mobile View Adjustments --- */
+/* This media query applies styles only to screens that are 500px wide or smaller */
+@media (max-width: 500px) {
+    .container {
+        padding: 25px; /* Reduce padding to give text more space on smaller screens */
+    }
+
+    h1 {
+        font-size: 3em; /* Make the main heading smaller and easier to read */
+    }
+
+    .message-box {
+        font-size: 1em; /* Slightly reduce the body text size */
+    }
+}
